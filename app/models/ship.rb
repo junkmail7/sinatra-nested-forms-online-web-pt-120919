@@ -12,7 +12,7 @@ class Ship
     SHIPS
   end
 
-  def clear
-    SHIPS.delete_all
+  def self.clear
+    SHIPS.clear
   end
 end
