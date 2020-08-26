@@ -3,7 +3,7 @@ require './environment'
 module FormsLab
   class App < Sinatra::Base
     get '/' do
-      erb :index
+      erb :root
     end
 
     get '/new' do
@@ -11,10 +11,10 @@ module FormsLab
     end
 
     post '/pirate' do
-      @pirate = pirate.new(params[:pirate])
+      @pirate = Pirate.new(params[:pirate])
 
       params[:pirate][:ships].each do |details|
-        Course.new(details)
+        Ship.new(details)
       end
 
       @ships = Ship.all
