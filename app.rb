@@ -7,7 +7,7 @@ module FormsLab
     end
 
     get '/new' do
-      erb :create_puppy
+      erb :pirates/new
     end
 
     post '/pirate' do
